@@ -1,0 +1,10 @@
+package tutorial;
+
+option java_package = "com.example";
+option java_outer_classname = "Student";
+
+message Student {
+  required string name = 1;
+  required int32 age = 2;
+  required string id = 3;
+}
