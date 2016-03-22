@@ -12,11 +12,9 @@ import com.example.tutorial.AddressBookProtos;
 @Path("/person")
 public class AddressBookService {
     @GET
-//    @Produces({"application/x-protobuf", MediaType.APPLICATION_JSON})
-//    @Consumes({"application/x-protobuf", MediaType.APPLICATION_JSON})
-	@Produces(MediaType.APPLICATION_JSON)
+    @Produces({MediaType.APPLICATION_JSON, "application/x-protobuf"})
+    @Consumes({MediaType.APPLICATION_JSON, "application/x-protobuf"})
 
-//    @Produces(MediaType.APPLICATION_XML)
     public AddressBookProtos.Person getPerson() {
         return AddressBookProtos.Person.newBuilder()
                 .setId(1)

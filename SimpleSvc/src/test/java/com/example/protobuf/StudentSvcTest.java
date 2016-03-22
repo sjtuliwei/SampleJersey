@@ -19,7 +19,7 @@ public class StudentSvcTest extends JerseyTest {
  
     @Test
     public void test() {
-        final Student student = target("student").request().get(Student.class);
-        assertEquals("William Li", student);
+        final Student.Person student = target("student").request().get(Student.Person.class);
+        assertEquals("William Li", student.getName());
     }
 }
